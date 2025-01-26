@@ -61,8 +61,8 @@ export default function Page() {
   };
 
   return (
-    <div className="flex flex-col justify-between w-full  md:flex-row min-h-screen max-h-screen md:divide-x">
-      <div className="w-full md:max-w-[50%]  md:max-h-screen ">
+    <div className="flex flex-col justify-between w-full  md:flex-row min-h-screen max-h-screen ">
+      <div className="w-full md:max-w-[50%] md:border-r  md:max-h-screen ">
         <div className="flex items-center justify-between p-4 w-full border-b">
           <h1 className="md:text-xl font-bold text-slate-50">
             Markdown Text Editor
@@ -89,7 +89,7 @@ export default function Page() {
         </div>
         <TextEditorWithLineCounter text={text} setText={setText} />
       </div>
-      <div className="md:max-w-[50%] max-h-[calc(100vh-50vh-71px)]md:max-h-screen overflow-y-auto border-t md:border-none flex-1 p-6 shadow-lg mt-2 md:mt-0">
+      <div className="md:max-w-[50%]  max-h-[calc(100vh-50vh-71px)] md:max-h-screen overflow-y-auto border-t md:border-none flex-1 p-6 shadow-lg mt-2 md:mt-0">
         <MDXRenderer content={text} />
       </div>
     </div>
