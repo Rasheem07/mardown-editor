@@ -10,12 +10,16 @@ const components = {
     </h1>
   ),
   h2: ({ children }: { children: React.ReactNode }) => (
-    <h2 style={{ fontSize: "1.50rem", fontWeight: 600, marginBottom: "0.5rem" }}>
+    <h2
+      style={{ fontSize: "1.50rem", fontWeight: 600, marginBottom: "0.5rem" }}
+    >
       {children}
     </h2>
   ),
   h3: ({ children }: { children: React.ReactNode }) => (
-    <h3 style={{ fontSize: "1.25rem", fontWeight: 500, marginBottom: "0.5rem" }}>
+    <h3
+      style={{ fontSize: "1.25rem", fontWeight: 500, marginBottom: "0.5rem" }}
+    >
       {children}
     </h3>
   ),
@@ -25,7 +29,9 @@ const components = {
     </h4>
   ),
   h5: ({ children }: { children: React.ReactNode }) => (
-    <h5 style={{ fontSize: "1.25rem", fontWeight: 400, marginBottom: "0.5rem" }}>
+    <h5
+      style={{ fontSize: "1.25rem", fontWeight: 400, marginBottom: "0.5rem" }}
+    >
       {children}
     </h5>
   ),
@@ -50,12 +56,24 @@ const components = {
     </a>
   ),
   ul: ({ children }: { children: React.ReactNode }) => (
-    <ul style={{ paddingLeft: "1.5rem", listStyleType: "disc", marginBottom: "0.5rem" }}>
+    <ul
+      style={{
+        paddingLeft: "1.5rem",
+        listStyleType: "disc",
+        marginBottom: "0.5rem",
+      }}
+    >
       {children}
     </ul>
   ),
   ol: ({ children }: { children: React.ReactNode }) => (
-    <ol style={{ paddingLeft: "1.5rem", listStyleType: "decimal", marginBottom: "0.5rem" }}>
+    <ol
+      style={{
+        paddingLeft: "1.5rem",
+        listStyleType: "decimal",
+        marginBottom: "0.5rem",
+      }}
+    >
       {children}
     </ol>
   ),
@@ -75,7 +93,11 @@ const components = {
     </blockquote>
   ),
   code: ({ children }: { children: React.ReactNode }) => (
-    <SyntaxHighlighter language="javascript" style={atomOneDark} className="rounded-md border border-gray-600">
+    <SyntaxHighlighter
+      language="javascript"
+      style={atomOneDark}
+      className="rounded-md border border-gray-600"
+    >
       {String(children)}
     </SyntaxHighlighter>
   ),
@@ -84,11 +106,24 @@ const components = {
       {children}
     </pre>
   ),
+  hr: () => (
+    <div className="py-2">
+      <hr style={{ margin: "8px 0" }} />
+    </div>
+  ),
   img: ({ src, alt }: { src: string; alt: string }) => (
-    <Image width={100} height={100} src={src} alt={alt} style={{ maxWidth: "100%", marginBottom: "0.5rem" }} />
+    <Image
+      width={100}
+      height={100}
+      src={src}
+      alt={alt}
+      style={{ maxWidth: "100%", marginBottom: "0.5rem" }}
+    />
   ),
   strong: ({ children }: { children: React.ReactNode }) => (
-    <strong style={{ fontWeight: 700, marginBottom: "0.5rem" }}>{children}</strong>
+    <strong style={{ fontWeight: 700, marginBottom: "0.5rem" }}>
+      {children}
+    </strong>
   ),
   em: ({ children }: { children: React.ReactNode }) => (
     <em style={{ fontStyle: "italic", marginBottom: "0.5rem" }}>{children}</em>
@@ -99,12 +134,24 @@ const components = {
     </del>
   ),
   sub: ({ children }: { children: React.ReactNode }) => (
-    <sub style={{ verticalAlign: "sub", fontSize: "0.8rem", marginBottom: "0.5rem" }}>
+    <sub
+      style={{
+        verticalAlign: "sub",
+        fontSize: "0.8rem",
+        marginBottom: "0.5rem",
+      }}
+    >
       {children}
     </sub>
   ),
   sup: ({ children }: { children: React.ReactNode }) => (
-    <sup style={{ verticalAlign: "super", fontSize: "0.8rem", marginBottom: "0.5rem" }}>
+    <sup
+      style={{
+        verticalAlign: "super",
+        fontSize: "0.8rem",
+        marginBottom: "0.5rem",
+      }}
+    >
       {children}
     </sup>
   ),

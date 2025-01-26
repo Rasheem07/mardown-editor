@@ -51,7 +51,7 @@ const TextEditorWithLineCounter = ({
   const lineNumberWidth = "30px"; // Adjust to match your font size and line height
 
   return (
-    <div className="w-full bg-opacity-8 5 pt-4 divide-y flex shadow-inner max-h-[calc(100vh-71px)] overflow-y-auto">
+    <div className="w-full max-h-[calc(100vh-50vh-71px)]   min-h-[calc(100vh-50vh-71px)]  bg-opacity-8 5 pt-4 divide-y flex shadow-inner md:max-h-[calc(100vh-71px)] overflow-y-auto p-2">
       <div
         className="pl-4 w-auto flex flex-col"
         style={{ width: lineNumberWidth }} // Fixed width for line numbers

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import components from "./mdx-components";
@@ -13,7 +13,8 @@ export default function MDXRenderer({ content }: MDXRendererProps) {
   const [mdxSource, setMdxSource] =
     React.useState<MDXRemoteSerializeResult | null>(null);
 
-  React.useEffect(() => {
+
+  useEffect(() => {
     // Serialize the raw MDX content
     const processMDX = async () => {
       const serializedContent = await serialize(content);
@@ -22,6 +23,9 @@ export default function MDXRenderer({ content }: MDXRendererProps) {
 
     processMDX();
   }, [content]);
+
+  // Scroll to the bottom of the preview content whenever it updates
+
 
   if (!mdxSource) return <div>Loading...</div>;
 
@@ -36,12 +40,14 @@ export default function MDXRenderer({ content }: MDXRendererProps) {
   );
 
   return (
-    <div id="preview">
+    <div
+      id="preview"
+      className=" w-full max-h-screen p-4" // Enables vertical scrolling
+    >
       {content ? (
-
         <MDXRemote {...mdxSource} components={components} />
       ) : (
-         <NoContentMessage />
+        <NoContentMessage />
       )}
     </div>
   );
