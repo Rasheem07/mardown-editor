@@ -42,7 +42,7 @@ export default function MDXRenderer({ content }: MDXRendererProps) {
   return (
     <div
       id="preview"
-      className=" w-full max-h-screen p-4" // Enables vertical scrolling
+      className=" w-full max-h-[calc(100vh-50vh-71px)]md:max-h-screen  p-4 md:min-h-[calc(100vh)]" // Enables vertical scrolling
     >
       {content ? (
         <MDXRemote {...mdxSource} components={components} />
