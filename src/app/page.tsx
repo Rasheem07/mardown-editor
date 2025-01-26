@@ -99,7 +99,7 @@ export default function Page() {
         </div>
         <TextEditorWithLineCounter text={text} setText={setText} />
       </div>
-      <div className="md:max-w-[50%] order-1 md:order-2 h-full max-h-[calc(100vh-50vh)] md:max-h-screen overflow-y-auto flex-1 p-2 md:p-6 shadow-lg " ref={previewRef}>
+      <div className="md:max-w-[50%] order-1 md:order-2 h-full max-h-[calc(100vh-50vh-71px)] md:max-h-screen overflow-y-auto flex-1 p-2 md:p-6 shadow-lg " ref={previewRef}>
         <MDXRenderer content={text} />
       </div>
     </div>
