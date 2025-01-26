@@ -26,7 +26,7 @@ export default function MDXRenderer({ content }: MDXRendererProps) {
   if (!mdxSource) return <div>Loading...</div>;
 
   const NoContentMessage = () => (
-    <div className="flex flex-col gap-2 h-full items-center justify-center text-center">
+    <div className="flex flex-col gap-2 h-full mt-20 items-center justify-center text-center">
       <Pencil className="text-4xl text-slate-50" /> {/* Lucide Icon */}
       <h1 className="text-2xl font-bold text-slate-50">No Content Yet</h1>
       <p className="text-base font-sans text-slate-400">
