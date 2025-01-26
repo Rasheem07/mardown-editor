@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -84,7 +85,7 @@ const components = {
     </pre>
   ),
   img: ({ src, alt }: { src: string; alt: string }) => (
-    <img src={src} alt={alt} style={{ maxWidth: "100%", marginBottom: "0.5rem" }} />
+    <Image width={100} height={100} src={src} alt={alt} style={{ maxWidth: "100%", marginBottom: "0.5rem" }} />
   ),
   strong: ({ children }: { children: React.ReactNode }) => (
     <strong style={{ fontWeight: 700, marginBottom: "0.5rem" }}>{children}</strong>
