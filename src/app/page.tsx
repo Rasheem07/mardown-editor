@@ -20,7 +20,7 @@ export default function Page() {
   };
 
   return (
-    <div className="flex justify-between w-full min-h-screen divide-x">
+    <div className="flex justify-between w-full min-h-screen max-h-screen divide-x">
       <div className="w-full max-w-[50%] max-h-screen">
         <div className="flex items-center justify-between p-4 w-full border-b">
           <h1 className="text-xl font-bold text-slate-50">
